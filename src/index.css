@@ -256,3 +256,42 @@ body {
   text-decoration: none;
   display: block;
 }
+/* Timeline Styles passend zu deinem bisherigen Design */
+.timeline {
+  position: relative;
+  padding-left: 50px;
+  border-left: 4px solid var(--card-dark);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  background: var(--card-dark);
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.timeline-item:hover::before {
+  transform: scale(1.2);
+}
+
+.timeline-time {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-title {
+  display: block;
+  font-size: 1rem;
+}
